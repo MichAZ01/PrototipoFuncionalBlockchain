@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "prototipoFuncionalBlockchain"
+    }
+  },
+  "defaultProject": "prototipoFuncionalBlockchain",
+  "cli": {
+    "analytics": false
+  }
 }
