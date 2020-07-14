@@ -9,6 +9,7 @@ import { LoginHeaderComponent } from './_components/navbars/login-header/login-h
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { StudentMenuComponent } from './_components/menu/student-menu/student-menu.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StudentMenuComponent } from './_components/menu/student-menu/student-me
     LoginHeaderComponent,
     LoginPageComponent,
     FooterComponent,
-    StudentMenuComponent
+    StudentMenuComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
