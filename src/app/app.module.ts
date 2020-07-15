@@ -10,6 +10,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { StudentMenuComponent } from './_components/menu/student-menu/student-menu.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { CompeRegisterComponent } from './pages/compe-register/compe-register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RegisterComponent } from './pages/register/register.component';
     LoginPageComponent,
     FooterComponent,
     StudentMenuComponent,
-    RegisterComponent
+    RegisterComponent,
+    CompeRegisterComponent
   ],
   imports: [
     BrowserModule,
