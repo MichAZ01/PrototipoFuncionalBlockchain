@@ -36,24 +36,14 @@
     margin-bottom: 10%;
     color: #e9ecef;
 }
-.btnLoginSubmit{
-    border: none;
-    padding: 2%;
-    width: 25%;
-    cursor: pointer;
-    background: #29abe2;
-    color: #fff;
-}
-.btnForgetPwd{
-    cursor: pointer;
-    margin-right: 5%;
-    color: #f8f9fa;
-}
+
+
 .register{
     background: -webkit-linear-gradient(left, #3c4043, #1d4a57);
     margin-top: 3%;
     padding: 3%;
-    border-radius: 2.5rem;
+    border-radius: 2rem;
+    
 }
 .nav-tabs .nav-link{
     border: 1px solid transparent;
@@ -61,12 +51,12 @@
     border-top-right-radius: .25rem;
 }
 
+
 .footer {
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    
-    color: white;
+
     
 }
