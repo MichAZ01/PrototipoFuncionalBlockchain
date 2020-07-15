@@ -1,56 +1,58 @@
 <app-login-header></app-login-header>
 
-<div class="container  register " style="margin-top: 8%;">
+<div *ngIf="!studentFlag" class="container  register " style="margin-top: 8%;">
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login Form 1</a>
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registro Estudiante</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Login Form 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Login Form 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Login Form 2</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registro Empleador</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Login Form 1</h3>
+                    <h3 class="register-heading">Estudiante</h3>
                     <div class="row register-form">
                         <div class="col-md-12">
                             <form method="post">
                                 <div class="form-group">
-                                    <input type="text" name="LGform1_user" class="form-control" placeholder="Your Email *" value="" required=""/>
+                                    <input type="text" name="mail" class="form-control" placeholder="Su correo electrónico *" value="" required=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="LGform1_pwd" class="form-control" placeholder="Your Password *" value="" required=""/>
+                                    <input type="password" name="password" class="form-control" placeholder="Su contraseña *" value="" required=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="LGform1" class="btnContactSubmit" value="Login" />
-                                    <a href="ForgetPassword.php" class="btnForgetPwd" value="Login">Forget Password?</a>
+                                    <input type="password" name="passwordConfirm" class="form-control" placeholder="Confirmar contraseña *" value="" required=""/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="LGform1" class="btnContactSubmit" value="Siguiente" (click)= "continueStudentReg();" />
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="tab-pane fade show text-align form-new" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                    <h3  class="register-heading">Login Form 2</h3>
+                    <h3  class="register-heading">Empleador</h3>
                     <div class="row register-form">
                         <div class="col-md-12">
                             <form method="post">
                                 <div class="form-group">
-                                    <input type="text" name="LGform2_user" class="form-control" placeholder="Your Email *" value="" required="" />
+                                    <input type="text" name="mailEmple" class="form-control" placeholder="Nombre de la empresa*" value="" required=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="LGform2_pwd" class="form-control" placeholder="Your Password *" value="" required=""/>
+                                    <input type="text" name="mailEmple" class="form-control" placeholder="Su correo electrónico *" value="" required=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" name="LGform2" class="btnContactSubmit" value="Login" />
-                                    <a href="ForgetPassword.php" class="btnForgetPwd" value="Login">Forget Password?</a>
+                                    <input type="password" name="passwordEmple" class="form-control" placeholder="Su contraseña *" value="" required=""/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="passwordConfirmEmple" class="form-control" placeholder="Confirmar contraseña *" value="" required=""/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" name="LGform2" class="btnContactSubmit" value="Registrarse " />
+                                    
                                 </div>
                             </form>
                         </div>
@@ -61,4 +63,71 @@
     </div>
 </div>
 
-<app-footer  class="footer"></app-footer>
+
+<!-- CONTINUE STUDENT REGISTER -->
+
+<div *ngIf="studentFlag" class="container  register " style="margin-top: 8%;">
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Información Personal</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Estudiante</h3>
+                    <div class="row register-form">
+                        <div class="col-md-12">
+                            <form method="post">
+                                <div class="form-group">
+                                    <label for="name"></label>
+                                    <input type="text" class="form-control"  placeholder="Nombre completo">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="lastname1"></label>
+                                        <input type="text" class="form-control"  placeholder="Primer apellido">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lastname2"></label>
+                                        <input type="text" class="form-control"  placeholder="Segundo apellido">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputAddress"></label>
+                                      <input type="number" class="form-control" id="inputAddress" placeholder="Número de identificación">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState"></label>
+                                        <select id="inputState" class="form-control">
+                                          <option selected>Cédula nacional</option>
+                                          <option>Pasaporte</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    
+                                    <input type="date" class="form-control" >
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <input type="number" class="form-control" placeholder="Teléfono" >
+                                  </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="mail" class="form-control" placeholder="Correo electrónico de recuperación" >
+                                </div>
+                                <input type="submit" name="LGform1" class="btnContactSubmit" value="Registrarse" (click)= "continueStudentReg();" />
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

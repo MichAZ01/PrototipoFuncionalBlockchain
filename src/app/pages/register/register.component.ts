@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  studentFlag = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  continueStudentReg(){
+    this.studentFlag = !this.studentFlag;
+  }
 }

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginHeaderComponent implements OnInit {
 
+  flagHeader = false ;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeHeader(){
+    this.flagHeader = !this.flagHeader;
+    console.log(this.flagHeader)
   }
 
 }

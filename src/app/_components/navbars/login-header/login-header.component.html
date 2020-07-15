@@ -1,11 +1,12 @@
-
-
-<nav class="navbar navbar bg justify-content-between login_header"  >
-   
-        <a href="#" class="navbar-brand text-light"><i class="fa fa-cube"></i> <b> (SADC)</b></a>
-      
-    <form class="form-inline">
-        <a class="nav-link text-light" routerLink= '/register'>¿Todavía no tienes cuenta?</a>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink= '/register'>Registrarse</button>
+<nav  class="navbar navbar bg justify-content-between login_header">   
+    <a href="#" class="navbar-brand text-light"><i class="fa fa-cube"></i> <b>SADC</b></a>
+    <form   class="form-inline">
+      <a  class="nav-link text-light" routerLink= '/register' (click) = "changeHeader();">¿Todavía no tiene cuenta?</a>
+      <button  class="btn btn-outline-success my-2 my-sm-0" type="button" routerLink= '/register' (click) = "changeHeader();">Registrarse</button>
+      <a  class="nav-link text-light" routerLink= '/login' (click) = "changeHeader();">¿Ya tiene cuenta?</a>
+      <button  class="btn btn-outline-success my-2 my-sm-0" type="button" routerLink= '/login' (click) = "changeHeader();">Iniciar Sesión</button>
     </form>
-  </nav>
+
+</nav>  
+
+
