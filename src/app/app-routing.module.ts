@@ -8,7 +8,7 @@ import { CompeRegisterComponent } from './pages/compe-register/compe-register.co
 
 const routes: Routes = [
   {
-    path : 'login',
+    path : '',
     component : LoginPageComponent
   },
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
     component: CompeRegisterComponent
   },
   {
-    path: '',
+    path: 'home',
     component: HomePageComponent
   }
 ];

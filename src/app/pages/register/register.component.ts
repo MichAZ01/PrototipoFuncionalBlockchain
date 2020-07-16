@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from "../../models/user.model";
+import { Employer } from "../../models/employer.model";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,12 +11,86 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   studentFlag = false;
-  constructor() { }
+  public user = new User();
+  public employer = new Employer();
+  errorPass = false;
+  errorEmpty = false;
+  errorReqInfo = false;
+  passwordConfirm = {
+    "passConfirm" : ""
+  }
+  
+
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+      
+  }
+
+  registerUser(){
+    let users : Array<User> = JSON.parse(localStorage.getItem("users"));
+    if(this.user.name !== "" &&  this.user.lastname1 !== "" && this.user.identification !== ""
+      && this.user.idType && this.user.accountType !== "" ){
+      users.push(this.user);
+      if(this.user.accountType === "Estudiante"){
+        
+        localStorage.setItem("users",JSON.stringify(users)); // set in local storage new employer
+        this._router.navigate(['home']); // to user page
+        console.log(this.user,"User to Student")
+      }else{
+        localStorage.setItem("users",JSON.stringify(users)); // set in local storage new employer
+        this._router.navigate(['home']); // to user page
+        console.log(this.user,"User to Verificator")
+      }
+    }else{
+      this.errorReqInfo = !this.errorReqInfo;
+      setTimeout(function() {
+        this.errorReqInfo = !this.errorReqInfo;   
+      }.bind(this), 3000);
+      return false;
+    }
+    
+  }
+
+  registerEmployer(){
+    let employers : Array<Employer> = JSON.parse(localStorage.getItem("employers"));
+    if(this.employer.email !== undefined){
+      if(this.verifyPassEmpty(this.employer)){
+        employers.push(this.employer);
+        localStorage.setItem("employers",JSON.stringify(employers)); // set in local storage new employer
+        this._router.navigate(['home']);  
+      }
+    }else{
+      this.errorReqInfo = !this.errorReqInfo;
+      setTimeout(function() {
+        this.errorReqInfo = !this.errorReqInfo;   
+      }.bind(this), 3000);
+      return false;
+    }
   }
 
   continueStudentReg(){
-    this.studentFlag = !this.studentFlag;
+    this.verifyPassEmpty(this.user);
+  }
+
+  verifyPassEmpty(user: any){
+    if(JSON.stringify(user) !== '{}'){
+      if(user.password === this.passwordConfirm.passConfirm){
+        this.studentFlag = !this.studentFlag;
+        return true;
+      }else{
+        this.errorPass = !this.errorPass;
+        setTimeout(function() {
+          this.errorPass = !this.errorPass;   
+      }.bind(this), 3000);
+      }
+      return false;
+    }else{
+      this.errorEmpty = !this.errorEmpty;
+      setTimeout(function() {
+        this.errorEmpty = !this.errorEmpty;   
+      }.bind(this), 3000);
+      return false;
+    }  
   }
 }

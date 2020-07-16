@@ -10,25 +10,28 @@
           <div class="col-md-7">
             <div class="card-body">
               <div class="brand-wrapper">
-                <a href="#" class="navbar-brand"><i class="fa fa-cube"></i> <b> SADC</b></a>
+                <a class="navbar-brand"><i class="fa fa-cube"></i> <b> SADC</b></a>
               </div>
               <p class="login-card-description">Inicia Sesión con su cuenta</p>
               <form action="#!">
                   <div class="form-group">
                     <label for="email" class="sr-only">Correo electrónico</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
+                    <input [(ngModel)] = "loginUserData.email"  type="email" name="email" id="email" class="form-control" placeholder="Correo electrónico" required>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="***********" required>
+                    <input  [(ngModel)] = "loginUserData.password" type="password" name="password" id="password" class="form-control" placeholder="***********" required>
                   </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Iniciar">
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Iniciar" (click)= "login();">
                 </form>
-                <a href="#!" class="forgot-password-link">¿Olvidaste la contreseña?</a>
+                <div *ngIf = "errorFlag" class="alert alert-danger elementToFadeInAndOut" role="alert">
+                  Correo incorrecto o contraseña. Vuelve a intentarlo o haz clic en ¿Olvidaste la contreseña? para cambiarla.
+                </div>
+                <a  class="forgot-password-link">¿Olvidaste la contreseña?</a>
                 <p class="login-card-footer-text">¿Aún no tiene cuenta? <a routerLink= '/register' class="text-reset">Registrarse aquí</a></p>
                 <nav class="login-card-footer-nav">
-                  <a href="#!">Términos de uso.</a>
-                  <a href="#!">Políticas de privacidad.</a>
+                  <a >Términos de uso.</a>
+                  <a >Políticas de privacidad.</a>
                 </nav>
             </div>
           </div>

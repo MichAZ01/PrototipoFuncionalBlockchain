@@ -2,6 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+
+
+
 import { AppComponent } from './app.component';
 import { MainNavbarComponent } from './_components/navbars/main-navbar/main-navbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -26,7 +30,8 @@ import { CompeRegisterComponent } from './pages/compe-register/compe-register.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
