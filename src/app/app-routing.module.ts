@@ -43,6 +43,11 @@ const routes: Routes = [
     path: 'employer/:id',
     component: EmployerComponent,
     canActivate : [AuthGuard]
+  },
+  {
+    path: '**',
+    component: LoginPageComponent
+    
   }
 
 ];

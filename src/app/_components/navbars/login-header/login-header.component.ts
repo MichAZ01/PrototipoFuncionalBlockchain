@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { VirtualTimeScheduler } from 'rxjs';
 
 
 @Component({
@@ -9,23 +10,26 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginHeaderComponent implements OnInit {
 
-  flagHeader = false ;
+  flagHeader : boolean;
   currentURL = "";
   constructor(private router: Router,private activeRoute :ActivatedRoute ) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
+    console.log(this.flagHeader,"BANDERA 1")
   }
 
-  
 
-  changeHeader(){
-    console.log(this.router.url);
-      if(this.router.url == "/login"){
-        this.flagHeader = !this.flagHeader;
-      }else{
-        this.flagHeader = !this.flagHeader;
-      }  
+  changeHeaderLogin(){
+    
+    this.router.navigate(['/login']);
+    this.flagHeader = false;
+  }
+
+  changeHeaderRegister(){
+    
+    this.router.navigate(['/register']);
+    this.flagHeader = true;
+
   }
 
 }
