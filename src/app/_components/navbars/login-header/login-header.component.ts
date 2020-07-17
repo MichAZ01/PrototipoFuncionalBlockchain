@@ -29,22 +29,6 @@ export class LoginHeaderComponent implements OnInit {
       
      }
 
-// getInfo(){
-  
-//   if(this.authService.loggedIn()){
-//       this.users= JSON.parse(localStorage.getItem("users")); 
-//       let id = localStorage.getItem("token");
-//       console.log(this.users,id,"PANANAAAA")
-//       this.user = this.users.find( ({ identification }) => identification === id );
-//       if(this.user){
-//         this.infoUser= this.user.name+" "+this.user.lastname1;
-//       }else{
-//         this.employers = JSON.parse(localStorage.getItem("employers"));
-//         this.employer = this.employers.find( ({ email }) => email === id );
-//         this.infoUser = this.employer.companyName;
-//       }
-//   }
-// }
 
 
   changeHeaderLogin(){
@@ -53,8 +37,7 @@ export class LoginHeaderComponent implements OnInit {
     this.flagHeader = false;
   }
 
-  changeHeaderRegister(){
-    
+  changeHeaderRegister(){ 
     this.router.navigate(['/register']);
     this.flagHeader = true;
 
