@@ -11,10 +11,10 @@
                     <i class="menu-icon fa fa-bell"></i><span class="menu-text">Notificaciones</span></a>
                 <div class="nav-item dropdown">
                     <a  data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">
-                        <i class="menu-icon fa fa-user"></i><span class="menu-text">Nombre apellido</span><b class="caret"></b></a>
+                        <i class="menu-icon fa fa-user"></i><span class="menu-text">{{infoUser}}</span><b class="caret"></b></a>
                     <div class="dropdown-menu">
                         <div class="divider dropdown-divider"></div>
-                        <a routerLink = '/'  class="dropdown-item"><i class="fa fa-power-off"></i> Salir</a>
+                        <a routerLink = '/'  (click)= "authService.logoutUser()"  class="dropdown-item"><i class="fa fa-power-off"></i> Salir</a>
                     </div>
                 </div>
             </div>

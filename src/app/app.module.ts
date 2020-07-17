@@ -15,6 +15,9 @@ import { FooterComponent } from './_components/footer/footer.component';
 import { StudentMenuComponent } from './_components/menu/student-menu/student-menu.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CompeRegisterComponent } from './pages/compe-register/compe-register.component';
+import { StudentComponent } from './pages/student/student.component';
+import { VerificatorComponent } from './pages/verificator/verificator.component';
+import { EmployerComponent } from './pages/employer/employer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { CompeRegisterComponent } from './pages/compe-register/compe-register.co
     FooterComponent,
     StudentMenuComponent,
     RegisterComponent,
-    CompeRegisterComponent
+    CompeRegisterComponent,
+    StudentComponent,
+    VerificatorComponent,
+    EmployerComponent
   ],
   imports: [
     BrowserModule,

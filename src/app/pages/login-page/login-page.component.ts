@@ -3,6 +3,7 @@ import { User } from 'src/app/models/user.model';
 import { Employer } from 'src/app/models/employer.model';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
@@ -32,11 +33,12 @@ export class LoginPageComponent implements OnInit {
     if(this.user){
       if(this.user.password === this.loginUserData.password){
         if(this.user.accountType === "Estudiante"){
-
-          this._router.navigate(['home']); // to user page
+          localStorage.setItem('token',this.user.identification.toString())
+          this._router.navigate(['student/'+this.user.identification]); // to user page
           console.log(this.loginUserData,"User to Student")
         }else{
-          this._router.navigate(['home']); // to user page
+          localStorage.setItem('token',this.user.identification.toString())
+          this._router.navigate(['verificator/'+this.user.identification]); // to user page
           console.log(this.loginUserData,"User to Verificator")
         }
       }else{
@@ -48,7 +50,8 @@ export class LoginPageComponent implements OnInit {
       }
     }else if(this.employer) {
       if(this.employer.password === this.loginUserData.password){
-        this._router.navigate(['home']); // to employer page
+        localStorage.setItem('token',this.employer.email.toString())
+        this._router.navigate(['employer/'+this.employer.email]); // to employer page
         console.log(this.loginUserData,"User to employer")
       }else{
         this.errorFlag = !this.errorFlag;

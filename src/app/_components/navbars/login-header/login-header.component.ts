@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login-header',
@@ -8,14 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class LoginHeaderComponent implements OnInit {
 
   flagHeader = false ;
-  constructor() { }
+  currentURL = "";
+  constructor(private router: Router,private activeRoute :ActivatedRoute ) { }
 
   ngOnInit(): void {
+    
   }
 
+  
+
   changeHeader(){
-    this.flagHeader = !this.flagHeader;
-    console.log(this.flagHeader)
+    console.log(this.router.url);
+      if(this.router.url == "/login"){
+        this.flagHeader = !this.flagHeader;
+      }else{
+        this.flagHeader = !this.flagHeader;
+      }  
   }
 
 }

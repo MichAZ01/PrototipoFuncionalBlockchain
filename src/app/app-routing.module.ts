@@ -4,11 +4,16 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { CompeRegisterComponent } from './pages/compe-register/compe-register.component';
+import { StudentMenuComponent } from './_components/menu/student-menu/student-menu.component';
+import { StudentComponent } from './pages/student/student.component';
+import { VerificatorComponent } from './pages/verificator/verificator.component';
+import { EmployerComponent } from './pages/employer/employer.component';
+import { AuthGuard } from 'src/auth.guard';
 
 
 const routes: Routes = [
   {
-    path : '',
+    path : 'login',
     component : LoginPageComponent
   },
   {
@@ -23,7 +28,23 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomePageComponent
+  },
+  {
+    path: 'student/:id',
+    component: StudentComponent,
+    canActivate : [AuthGuard]
+  },
+  {
+    path: 'verificator/:id',
+    component: VerificatorComponent,
+    canActivate : [AuthGuard]
+  },
+  {
+    path: 'employer/:id',
+    component: EmployerComponent,
+    canActivate : [AuthGuard]
   }
+
 ];
 
 @NgModule({

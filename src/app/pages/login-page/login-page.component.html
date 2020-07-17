@@ -22,7 +22,7 @@
                     <label for="password" class="sr-only">Contraseña</label>
                     <input  [(ngModel)] = "loginUserData.password" type="password" name="password" id="password" class="form-control" placeholder="***********" required>
                   </div>
-                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Iniciar" (click)= "login();">
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Iniciar" (click)= "login();">
                 </form>
                 <div *ngIf = "errorFlag" class="alert alert-danger elementToFadeInAndOut" role="alert">
                   Correo incorrecto o contraseña. Vuelve a intentarlo o haz clic en ¿Olvidaste la contreseña? para cambiarla.

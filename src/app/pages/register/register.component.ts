@@ -33,14 +33,13 @@ export class RegisterComponent implements OnInit {
       && this.user.idType && this.user.accountType !== "" ){
       users.push(this.user);
       if(this.user.accountType === "Estudiante"){
-        
+        localStorage.setItem('token',this.user.identification.toString())
         localStorage.setItem("users",JSON.stringify(users)); // set in local storage new employer
-        this._router.navigate(['home']); // to user page
-        console.log(this.user,"User to Student")
+        this._router.navigate(['student/'+this.user.identification]); // to user page student
       }else{
+        localStorage.setItem('token',this.user.identification.toString())
         localStorage.setItem("users",JSON.stringify(users)); // set in local storage new employer
-        this._router.navigate(['home']); // to user page
-        console.log(this.user,"User to Verificator")
+        this._router.navigate(['verificator/'+this.user.identification]); // to user page verificator
       }
     }else{
       this.errorReqInfo = !this.errorReqInfo;
@@ -54,11 +53,13 @@ export class RegisterComponent implements OnInit {
 
   registerEmployer(){
     let employers : Array<Employer> = JSON.parse(localStorage.getItem("employers"));
+    console.log(this.employer,this.passwordConfirm.passConfirm,"12121212")
     if(this.employer.email !== undefined){
       if(this.verifyPassEmpty(this.employer)){
         employers.push(this.employer);
+        localStorage.setItem('token',this.employer.email.toString())
         localStorage.setItem("employers",JSON.stringify(employers)); // set in local storage new employer
-        this._router.navigate(['home']);  
+        this._router.navigate(['employer/'+this.employer.email]); // to employer page
       }
     }else{
       this.errorReqInfo = !this.errorReqInfo;

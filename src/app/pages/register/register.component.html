@@ -55,7 +55,7 @@
                                     <input type="password"  [(ngModel)] ="employer.password" name="password" class="form-control" placeholder="Su contraseña *" value="" required=""/>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="passwordConfirmEmple" class="form-control" placeholder="Confirmar contraseña *" value="" required=""/>
+                                    <input  [(ngModel)] ="passwordConfirm.passConfirm" type="password" name="passConfirm" class="form-control" placeholder="Confirmar contraseña *" value="" required=""/>
                                 </div>
                                 <p>* Campos requeridos</p>
                                 <div class="form-group">
@@ -114,7 +114,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                       <label for="identification">Identificación</label>
-                                      <input  [(ngModel)] ="user.identification"  name="identification" type="number" class="form-control" id="inputAddress" placeholder="Identificación *">
+                                      <input  [(ngModel)] ="user.identification"  name="identification" type="text" class="form-control" id="inputAddress" placeholder="Identificación *">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputState">Tipo ID*</label>
