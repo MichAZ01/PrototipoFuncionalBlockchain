@@ -18,6 +18,7 @@ import { CompeRegisterComponent } from './pages/compe-register/compe-register.co
 import { StudentComponent } from './pages/student/student.component';
 import { VerificatorComponent } from './pages/verificator/verificator.component';
 import { EmployerComponent } from './pages/employer/employer.component';
+import { EmployerMenuComponent } from './_components/employer-menu/employer-menu.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { EmployerComponent } from './pages/employer/employer.component';
     CompeRegisterComponent,
     StudentComponent,
     VerificatorComponent,
-    EmployerComponent
+    EmployerComponent,
+    EmployerMenuComponent
   ],
   imports: [
     BrowserModule,
