@@ -19,6 +19,8 @@ import { StudentComponent } from './pages/student/student.component';
 import { VerificatorComponent } from './pages/verificator/verificator.component';
 import { EmployerComponent } from './pages/employer/employer.component';
 import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
+import { CompetenciesMenuComponent } from './_components/menu/competencies-menu/competencies-menu.component';
+import { CompetenciesNavbarComponent } from './_components/navbars/competencies-navbar/competencies-navbar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { CompetenciesPageComponent } from './pages/competencies-page/competencie
     StudentComponent,
     VerificatorComponent,
     EmployerComponent,
-    CompetenciesPageComponent
+    CompetenciesPageComponent,
+    CompetenciesMenuComponent,
+    CompetenciesNavbarComponent
   ],
   imports: [
     BrowserModule,

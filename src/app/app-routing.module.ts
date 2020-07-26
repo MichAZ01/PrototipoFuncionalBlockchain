@@ -9,6 +9,7 @@ import { StudentComponent } from './pages/student/student.component';
 import { VerificatorComponent } from './pages/verificator/verificator.component';
 import { EmployerComponent } from './pages/employer/employer.component';
 import { AuthGuard } from 'src/auth.guard';
+import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
 
 
 const routes: Routes = [
@@ -45,9 +46,13 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },
   {
-    path: '**',
+    path: '',
     component: LoginPageComponent
     
+  },
+  {
+    path: 'competencies',
+    component: CompetenciesPageComponent
   }
 
 ];
