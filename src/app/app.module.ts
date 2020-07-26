@@ -9,6 +9,10 @@ import { LoginHeaderComponent } from './_components/navbars/login-header/login-h
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { StudentMenuComponent } from './_components/menu/student-menu/student-menu.component';
+import { StudentPageComponent } from './pages/student-page/student-page.component';
+import { StudentAddcompComponent } from './pages/student-addcomp/student-addcomp.component';
+import { StudentCompComponent } from './pages/student-comp/student-comp.component';
+import { TestComponent } from './pages/test/test.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { StudentMenuComponent } from './_components/menu/student-menu/student-me
     LoginHeaderComponent,
     LoginPageComponent,
     FooterComponent,
-    StudentMenuComponent
+    StudentMenuComponent,
+    StudentPageComponent,
+    StudentAddcompComponent,
+    StudentCompComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
