@@ -1,119 +1,106 @@
-<app-main-navbar style="z-index: 99">
-</app-main-navbar>
+<div class="col-12 mt-3">
+    <div class="card">
+        <h5 class="card-header">Competencias</h5>
+        <div class="card-body">
+            <div class="comp-body">
+                <h5 class="card-title">Matemática intermedio</h5>
+                <i class="fa fa-certificate" style="color: gold;"></i>
+            </div>
+            <p class="card-text">Esta competencia ha sido verificada. Ahora puedes compartir esta competencia.
+            </p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Compartir competencia
+            </button>
 
-<section class="body">
-    <app-student-menu>
-    </app-student-menu>
-    <section class="content">
-        <div class="col-12 mt-3">
-            <div class="card">
-                <h5 class="card-header">Competencias</h5>
-                <div class="card-body">
-                    <div class="comp-body">
-                        <h5 class="card-title">Matemática intermedio</h5>
-                        <i class="fa fa-certificate" style="color: gold;"></i>
-                    </div>
-                    <p class="card-text">Esta competencia ha sido verificada. Ahora puedes compartir esta competencia.
-                    </p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Compartir competencia
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Matemática intermedio</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body" style="align-content: center;">
-                                    <p>Compartir la competencia verificada mediante el código QR.</p>
-                                    <div style="display: flex;">
-                                        <img src="../../../assets/images/QR.png">
-                                        <div class="qr-info">
-                                            <a class="navbar-brand">
-                                                <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
-                                            </a><br />
-                                            Nombre: Luis Molina <br />
-                                            Competencia: Matemática intermedio
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Descargar Código QR</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Matemática intermedio</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="align-content: center;">
+                            <p>Compartir la competencia verificada mediante el código QR.</p>
+                            <div style="display: flex;">
+                                <img src="../../../assets/images/QR.png">
+                                <div class="qr-info">
+                                    <a class="navbar-brand">
+                                        <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
+                                    </a><br />
+                                    Nombre: Luis Molina <br />
+                                    Competencia: Matemática intermedio
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <div class="comp-body">
-                        <h5 class="card-title">Inglés Básico</h5>
-                        <i class="fa fa-clock-o"></i>
-                    </div>
-                    <p class="card-text">Esta competencia no ha sido verificada.</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" disabled class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Compartir competencia
-                    </button>
-                </div>
-
-                <div class="card-body">
-                    <div class="comp-body">
-                        <h5 class="card-title">Francés intermedio</h5>
-                        <i class="fa fa-certificate" style="color: gold;"></i>
-                    </div>
-                    <p class="card-text">Esta competencia ha sido verificada. Ahora puedes compartir esta competencia.
-                    </p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPython">
-                        Compartir competencia
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModalPython" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Francés Intermedio</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body" style="align-content: center;">
-                                    <p>Compartir la competencia verificada mediante el código QR.</p>
-                                    <div style="display: flex;">
-                                        <img src="../../../assets/images/QR.png">
-                                        <div class="qr-info">
-                                            <a class="navbar-brand">
-                                                <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
-                                            </a><br />
-                                            Nombre: Luis Molina <br />
-                                            Competencia: Francés Intermedio
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Descargar Código QR</button>
-                                </div>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Descargar Código QR</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-</section>
-<app-footer></app-footer>
+        <div class="card-body">
+            <div class="comp-body">
+                <h5 class="card-title">Inglés Básico</h5>
+                <i class="fa fa-clock-o"></i>
+            </div>
+            <p class="card-text">Esta competencia no ha sido verificada.</p>
+            <!-- Button trigger modal -->
+            <button type="button" disabled class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Compartir competencia
+            </button>
+        </div>
+
+        <div class="card-body">
+            <div class="comp-body">
+                <h5 class="card-title">Francés intermedio</h5>
+                <i class="fa fa-certificate" style="color: gold;"></i>
+            </div>
+            <p class="card-text">Esta competencia ha sido verificada. Ahora puedes compartir esta competencia.
+            </p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPython">
+                Compartir competencia
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalPython" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Francés Intermedio</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="align-content: center;">
+                            <p>Compartir la competencia verificada mediante el código QR.</p>
+                            <div style="display: flex;">
+                                <img src="../../../assets/images/QR.png">
+                                <div class="qr-info">
+                                    <a class="navbar-brand">
+                                        <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
+                                    </a><br />
+                                    Nombre: Luis Molina <br />
+                                    Competencia: Francés Intermedio
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Descargar Código QR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,7 +5,7 @@
     <app-student-menu>
     </app-student-menu>
     <section class="content">
-        <div class="container emp-profile mt-5 ">
+        <div *ngIf="viewFlag == 0" class="container emp-profile mt-5 ">
             <form method="post">
                 <div class="row">
                     <div class="col-md-4">
@@ -92,7 +92,14 @@
                 </div>
             </form>           
         </div>
+
+        <div *ngIf="viewFlag == 1">
+            <app-student-comp></app-student-comp>
+        </div>
+
+        <div *ngIf="viewFlag == 2">
+            <app-student-addcomp></app-student-addcomp>
+        </div>      
     </section>
-    
 </section>
 <app-footer></app-footer>
