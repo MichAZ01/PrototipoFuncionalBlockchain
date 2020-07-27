@@ -10,6 +10,7 @@ import { VerificatorComponent } from './pages/verificator/verificator.component'
 import { EmployerComponent } from './pages/employer/employer.component';
 import { AuthGuard } from 'src/auth.guard';
 import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
+import { CompAddCompetenciesComponent } from './pages/comp-add-competencies/comp-add-competencies.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     path: 'competencies',
     component: CompetenciesPageComponent
+  },
+  {
+    path: 'competencies-addStatements',
+    component: CompAddCompetenciesComponent
   }
 
 ];

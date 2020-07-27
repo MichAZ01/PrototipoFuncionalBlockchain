@@ -21,6 +21,7 @@ import { EmployerComponent } from './pages/employer/employer.component';
 import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
 import { CompetenciesMenuComponent } from './_components/menu/competencies-menu/competencies-menu.component';
 import { CompetenciesNavbarComponent } from './_components/navbars/competencies-navbar/competencies-navbar.component';
+import { CompAddCompetenciesComponent } from './pages/comp-add-competencies/comp-add-competencies.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CompetenciesNavbarComponent } from './_components/navbars/competencies-
     EmployerComponent,
     CompetenciesPageComponent,
     CompetenciesMenuComponent,
-    CompetenciesNavbarComponent
+    CompetenciesNavbarComponent,
+    CompAddCompetenciesComponent,
   ],
   imports: [
     BrowserModule,
