@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { VerificatorProfileComponent } from 'src/app/pages/verificator-profile/verificator-profile.component';
 
 @Component({
   selector: 'app-verificator-menu',
@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class VerificatorMenuComponent implements OnInit {
   flagHeader : number;
 
-  constructor(private router: Router,private activeRoute :ActivatedRoute) { }
+  constructor(private verificatorC: VerificatorProfileComponent) { }
 
   ngOnInit(): void {
     if('/verificator-comp' == location.pathname.toString())
@@ -21,18 +21,18 @@ export class VerificatorMenuComponent implements OnInit {
   }
 
   changeProfile(){
-    this.router.navigate(['verificator/'+localStorage.getItem("token")]);
+    this.verificatorC.viewFlag = 0;
     this.flagHeader = 0;
   }
 
   changeComp(){ 
-    this.router.navigate(['verificator-comp']);
+    this.verificatorC.viewFlag = 1;
     this.flagHeader = 1;
 
   }
 
   changeAddComp(){ 
-    this.router.navigate(['verificator-addcomp']);
+    this.verificatorC.viewFlag = 2;
     this.flagHeader = 2;
 
   }
