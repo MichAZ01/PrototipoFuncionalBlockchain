@@ -23,6 +23,7 @@ import { TestComponent } from './pages/test/test.component';
 import { VerificatorMenuComponent } from './_components/menu/verificator-menu/verificator-menu.component';
 import { VerificatorProfileComponent } from './pages/verificator-profile/verificator-profile.component';
 import { VerificatorAddCompComponent } from './pages/verificator-add-comp/verificator-add-comp.component';
+import { EmployerMenuComponent } from './_components/employer-menu/employer-menu.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { VerificatorAddCompComponent } from './pages/verificator-add-comp/verifi
     TestComponent,
     VerificatorMenuComponent,
     VerificatorProfileComponent,
-    VerificatorAddCompComponent
+    VerificatorAddCompComponent,
+    EmployerMenuComponent
   ],
   imports: [
     BrowserModule,
