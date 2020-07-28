@@ -9,6 +9,8 @@ import { StudentComponent } from './pages/student/student.component';
 import { VerificatorComponent } from './pages/verificator/verificator.component';
 import { EmployerComponent } from './pages/employer/employer.component';
 import { AuthGuard } from 'src/auth.guard';
+import { StudentPageComponent } from './pages/student-page/student-page.component';
+import { TestComponent } from './pages/test/test.component';
 
 
 const routes: Routes = [
@@ -45,11 +47,13 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },
   {
-    path: '**',
-    component: LoginPageComponent
-    
+    path: 'student',
+    component: StudentPageComponent
+  },
+  {
+    path: 'test',
+    component: TestComponent
   }
-
 ];
 
 @NgModule({
