@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-verificator',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./verificator.component.scss']
 })
 export class VerificatorComponent implements OnInit {
-
-  constructor() { }
+  constructor(private router: Router,private activeRoute :ActivatedRoute) { }
 
   ngOnInit(): void {
+
   }
 
+  ngAfterViewInit(){
+    
+   }
+   openComp(){ 
+    this.router.navigate(['test']);
+  }
 }

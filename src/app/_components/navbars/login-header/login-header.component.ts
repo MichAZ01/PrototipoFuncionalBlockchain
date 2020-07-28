@@ -33,7 +33,7 @@ export class LoginHeaderComponent implements OnInit {
 
   changeHeaderLogin(){
     
-    this.router.navigate(['/login']);
+    this.router.navigate(['']);
     this.flagHeader = false;
   }
 

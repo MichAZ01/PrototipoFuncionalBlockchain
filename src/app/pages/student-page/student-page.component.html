@@ -1,0 +1,113 @@
+<app-main-navbar>
+</app-main-navbar>
+
+<section class="body">
+    <app-student-menu>
+    </app-student-menu>
+    <section class="content">
+        <div *ngIf="viewFlag == 0" class="container emp-profile mt-5 ">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1200px-Circle-icons-profile.svg.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="profile-head">
+                                    <h5>
+                                        Luis Molina
+                                    </h5>
+                                    <h6>
+                                        Estudiante
+                                    </h6>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Acerca de</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="profile-work">
+                            <p>Competencias</p>
+                            <a>Inglés básico</a><br/>
+                            <a>Matemática avanzada</a><br/>
+                            <a>Programación intermedia</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Nombre</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Luis Molina</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Correo</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>estudiante@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Teléfono</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>+50686157520</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profesión</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Ingeniero en computación</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Kudos</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>15</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Competencias verificadas</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>12</p>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+
+        <div *ngIf="viewFlag == 1">
+            <app-student-comp></app-student-comp>
+        </div>
+
+        <div *ngIf="viewFlag == 2">
+            <app-student-addcomp></app-student-addcomp>
+        </div>      
+    </section>
+</section>
+<app-footer></app-footer>

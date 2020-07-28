@@ -1,18 +1,23 @@
 
 
-<div class="row">
-    <div class="col-4">
-        <app-student-menu></app-student-menu>
-    </div>
-    <div class="col-8 mt-5 ">
+    <div class="col-12 mt-3">
+      <div class="card" style = "z-index: 1">
+        <nav class="navbar navbar-light bg-light">
+          <form class="form-inline">
+            <span class="input-group-text" id="basic-addon1"><img src="https://image.flaticon.com/icons/svg/751/751463.svg"/></span>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar competencia" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </nav>
+      </div>
         <div class="card">
-            <h5 class="card-header">Featured</h5>
+            <h5 class="card-header">Competencias</h5>
             <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <h5 class="card-title">Programación básica python</h5>
+              <p class="card-text">Verificar la competencia de programación básica python.</p>
               <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
+    Verificar competencia
   </button>
   
   <!-- Modal -->
@@ -20,26 +25,79 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Programación básica Python</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
+          Verificar la competencia de programación básica python.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click) = "openComp();">Verificar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Inglés básico</h5>
+              <p class="card-text">Verificar la competencia de nivel básico de inglés.</p>
+              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Verificar competencia
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Inglés básico</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Verificar la competencia de nivel básico de inglés.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Verificar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Programación básica</h5>
+              <p class="card-text">Verificar la competencia de nivel básico de programación.</p>
+              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Verificar competencia
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Inglés básico</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Verificar la competencia de nivel básico de programación.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Verificar</button>
         </div>
       </div>
     </div>
   </div>
             </div>
           </div>
-          
-          
-        
-        
     </div>
-</div>

@@ -1,41 +1,248 @@
-
-
-<div class="row">
-    <div class="col-4">
-        <app-student-menu></app-student-menu>
-    </div>
-    <div class="col-8 mt-5 ">
-        <div class="card">
-            <h5 class="card-header">Featured</h5>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
+<app-main-navbar></app-main-navbar>
+<section class="body">
+  <app-employer-menu></app-employer-menu>
+  <section class="content">
+    <div class="container" *ngIf="!flag">
+      <div class="col-8 mt-5 ">
+        <div class="row">
+          <div class="col-12">
+            <i class="fa fa-search icon"></i>
+            <input class="input-field" type="text" placeholder="Buscar Competencia" name="competenciaBuscada">
+            <button type="button" class="btn btn-outline-dark style" style="margin-left: 10pt;">Añadir a la
+              Búsqueda</button>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a title="" data-placement="top" data-toggle="tooltip" class="icono">
+                  <i class="fa fa-close icon" id="cancel-icon"></i>
+                  <span style="font-family:Tahoma, Geneva, sans-serif;font-size:16px;">Lenguajes</span>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a title="" data-placement="top" data-toggle="tooltip" class="icono">
+                  <i class="fa fa-close icon" id="cancel-icon"></i>
+                  <span style="font-family:Tahoma, Geneva, sans-serif;font-size:16px;">Básico</span>
+                </a>
+              </li>
+              <li class="list-group-item">
+                <a title="" data-placement="top" data-toggle="tooltip" class="icono">
+                  <i class="fa fa-close icon" id="cancel-icon"></i>
+                  <span style="font-family:Tahoma, Geneva, sans-serif;font-size:16px;">Exámenes</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <button type="button" class="btn btn-outline-dark style" style="margin-left: 10pt;">Buscar</button>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card">
+              <h5 class="card-header">Resultados de la Búsqueda</h5>
+              <div class="card-body">
+                <h5 class="card-title">Aprendizaje de Inglés Básico</h5>
+                <p class="card-text">En esta competencia se verificará el nivel de inglés que maneje el estudiante, si
+                  logra aprobar la competencia se certificará su nivel.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Ver más detalles de la Competencia
+                </button>
+                <h5 class="card-title">Aprendizaje de Alemán Básico</h5>
+                <p class="card-text">En esta competencia se verificará el nivel de alemán que maneje el estudiante, si
+                  logra aprobar la competencia se certificará su nivel.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                  Ver más detalles de la Competencia
+                </button>
+                <h5 class="card-title">Aprendizaje de Francés Básico</h5>
+                <p class="card-text">En esta competencia se verificará el nivel de francés que maneje el estudiante, si
+                  logra aprobar la competencia se certificará su nivel.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                  Ver más detalles de la Competencia
+                </button>
+              </div>
+            </div>
+          </div>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información de la Competencia "Aprendizaje de Inglés
+                    Básico"</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La competencia requiere de 2 exámenes distintos, uno centrado en la parte escrita y otro enfocado en el
+                  "Listening", cumpliendo estas dos pruebas con un puntaje conjunto mayor a un 70% se confirma que el
+                  estudiante cuenta con un nivel básico de inglés.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información de la Competencia "Aprendizaje de Alemán
+                    Básico"</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La competencia requiere de 2 exámenes distintos, uno centrado en la parte escrita y otro enfocado en la
+                  escritura de este lenguaje, cumpliendo estas dos pruebas con un puntaje conjunto mayor a un 70% se
+                  confirma que el estudiante cuenta con un nivel básico de alemán.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información de la Competencia "Aprendizaje de Francés
+                    Básico"</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  La competencia requiere de 2 exámenes distintos, uno centrado en la parte escrita y otro enfocado en el
+                  "Listening", cumpliendo estas dos pruebas con un puntaje conjunto mayor a un 70% se confirma que el
+                  estudiante cuenta con un nivel básico de francés.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  
+    <!--Segunda Pagina-->
+    <div class="container" *ngIf="flag">
+      <div class="col-8 mt-5 ">
+        <div class="row">
+          <div class="col-12">
+            <i class="fa fa-search icon"></i>
+            <input class="input-field" type="text" placeholder="Buscar Persona" name="personaBuscada">
+            <button type="button" class="btn btn-outline-dark style" style="margin-left: 10pt;">Buscar</button>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="card">
+              <h5 class="card-header">Resultados de la Búsqueda</h5>
+              <div class="card-body">
+                <h5 class="card-title">Sebastián Segura</h5>
+                <p class="card-text">El estudiante ha estado buscando cursos relacionados con lenguajes, música y
+                  programación.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                  Ver el perfil del estudiante
+                </button>
+                <h5 class="card-title">Sebastián Zamora</h5>
+                <p class="card-text">El estudiante ha estado buscando cursos relacionados con música, arquitectura y
+                  dibujo.</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                  Ver el perfil del estudiante
+                </button>
+                <h5 class="card-title">Sebastián Villanueva</h5>
+                <p class="card-text">El estudiante ha estado buscando cursos relacionados con física, biología y Linux</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+                  Ver el perfil del estudiante
+                </button>
+              </div>
             </div>
-          </div>   
+          </div>
+  
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información del Estudiante: Sebastián Segura</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Tiene 20 años, vive en Tilarán (Guanacaste) y actualmente se encuentra estudiando en el ITCR.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información del Estudiante: Sebastián Zamora</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Tiene 21 años, vive en Tilarán (Guanacaste) y actualmente se encuentra estudiando en el ITCR.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Información del Estudiante: Sebastián Villanueva</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Tiene 21 años, vive en Grecia (Alajuela) y actualmente se encuentra estudiando en el ITCR.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
+</section>
+<app-footer></app-footer>
