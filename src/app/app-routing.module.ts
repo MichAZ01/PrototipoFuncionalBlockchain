@@ -32,11 +32,6 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'student/:id',
-    component: StudentComponent,
-    canActivate : [AuthGuard]
-  },
-  {
     path: 'verificator/:id',
     component: VerificatorComponent,
     canActivate : [AuthGuard]
@@ -47,7 +42,7 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },
   {
-    path: 'student',
+    path: 'student/:id',
     component: StudentPageComponent
   },
   {
