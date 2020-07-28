@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery/dist/jquery.min.js';
-import Web3 from 'web3';
+import * as Web3 from 'web3';
 
 @Component({
   selector: 'app-verificator',
@@ -24,41 +23,23 @@ export class VerificatorComponent implements OnInit {
 
   this.web3.eth.defaultAccount = this.web3.eth.accounts[0];
 
-  var CoursetroContract =  this.web3.eth.contract([
+  var CoursetroContract = this.web3.eth.contract([
     {
       "constant": false,
       "inputs": [
         {
-          "name": "_fName",
+          "name": "_nameCompetition",
           "type": "string"
         },
         {
-          "name": "_age",
+          "name": "_id",
           "type": "uint256"
         }
       ],
-      "name": "setInstructor",
+      "name": "setCompetition",
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [],
-      "name": "getInstructor",
-      "outputs": [
-        {
-          "name": "",
-          "type": "string"
-        },
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -77,20 +58,38 @@ export class VerificatorComponent implements OnInit {
         },
         {
           "indexed": false,
-          "name": "age",
+          "name": "id",
           "type": "uint256"
         }
       ],
-      "name": "Instructor",
+      "name": "Competition",
       "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCompetition",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
     }
   ]);
-console.log('oh no');
-  var Coursetro = CoursetroContract.at('0xB2b567B650290Fd9AF7f2Ff7DDe40B80fd309493');
-
-  var instructorEvent = Coursetro.Instructor();
-
-       Coursetro.setInstructor("Pedro",5);
+  console.log(' years old)');
+  var Coursetro = CoursetroContract.at('0x05591A8898224771050e82620082a404341BeDb8');
+  var competitionEvent = Coursetro.Competition();
+ 
+       Coursetro.setCompetition("Python",5);
    }
-
+   
+// Nombre competencia, Identificacion
 }
