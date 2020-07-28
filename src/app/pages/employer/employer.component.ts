@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employer.component.scss']
 })
 export class EmployerComponent implements OnInit {
-
+  flag = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  cambiarBandera(): void{
+    this.flag = !this.flag;
   }
 
 }
