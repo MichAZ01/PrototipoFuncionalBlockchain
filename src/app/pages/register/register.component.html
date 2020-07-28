@@ -1,26 +1,30 @@
+<app-login-header></app-login-header>
+<div class="container">
 
-
-<div *ngIf="!studentFlag" class="container  register " style="margin-top: 8%; margin-bottom: 8%;" >
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registro Estudiante / Verificador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registro Empleador</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <h3 class="register-heading">Estudiante / Verificador</h3>
-                    <div class="row register-form">
-                        <div class="col-md-12">
-                            <form method="post">
-                                <div class="form-group">
-                                    <input [(ngModel)] ="user.email" type="text" name="mail" class="form-control" placeholder="Su correo electrónico *" value="" required=""/>
-                                </div>
-                                <div class="form-group">
+    <div *ngIf="!studentFlag" class="container  register " style="margin-top: 8%; margin-bottom: 8%;" >
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Registro Estudiante / Verificador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Registro Empleador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="compe-tab" data-toggle="tab" href="#compe" role="tab" aria-controls="compe" aria-selected="false">Registro Competencias</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Estudiante / Verificador</h3>
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <form method="post">
+                                    <div class="form-group">
+                                        <input [(ngModel)] ="user.email" type="text" name="mail" class="form-control" placeholder="Su correo electrónico *" value="" required=""/>
+                                    </div>
+                                    <div class="form-group">
                                     <input [(ngModel)] ="user.password" type="password" name="password" class="form-control" placeholder="Su contraseña *" value="" required=""/>
                                 </div>
                                 <div class="form-group">
@@ -75,15 +79,71 @@
                         </div>
                     </div>
                 </div>
+                <!-- COMPE REGISTER -->
+                <div class="tab-pane fade show text-align form-new" id="compe" role="tabpanel" aria-labelledby="compe-tab">
+                    <h3  class="register-heading">Competencia</h3>
+                    <div class="row register-form">
+                        <div class="col-md-12">
+                            <form method="post">
+                                <div class="form-group">
+                                    <label for="name">Nombre completo </label>
+                                    <input [(ngModel)] ="competencia.name"  name="name" type="text" class="form-control"  placeholder="*">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="lastname1">Primer apellido</label>
+                                        <input [(ngModel)] ="competencia.lastname1"  name="lastname1" type="text" class="form-control"  placeholder=" *">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="lastname2">Segundo apellido</label>
+                                        <input [(ngModel)] ="competencia.lastname2" name="lastname2" type="text" class="form-control"  placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="id">Identificación</label>
+                                      <input  [(ngModel)] ="competencia.id"  name="id" type="text" class="form-control" id="inputAddress" placeholder="Identificación *">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputState">Tipo ID*</label>
+                                        <select  [(ngModel)] ="competencia.idType" name="idType" id="inputState" class="form-control" >
+                                            <option   selected>Cédula nacional</option>
+                                            <option>Pasaporte</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input [(ngModel)] ="competencia.email" type="text" name="mail" class="form-control" placeholder="Su correo electrónico *" value="" required=""/>
+                                </div>
+                                <div class="form-group">
+                                <input [(ngModel)] ="competencia.password" type="password" name="password" class="form-control" placeholder="Su contraseña *" value="" required=""/>
+                            </div>
+                            <div class="form-group">
+                                <input [(ngModel)] ="passwordConfirm.passConfirm" type="password" name="passConfirm " class="form-control" placeholder="Confirmar contraseña *" value="" required=""/>
+                            </div>
+                                
+                                <p>* Campos requeridos</p>
+                                <input type="submit" name="LGform4" class="btnContactSubmit" value="Registrarse" (click)= "registerCompe();" />
+                                <div *ngIf = "errorReqInfo" class="alert alert-danger mt-2 elementToFadeInAndOut" role="alert">
+                                    Rellenar los campos requeridos.
+                                </div>
+                                <div *ngIf = "errorPass" class="alert alert-danger elementToFadeInAndOut" role="alert">
+                                    Contraseñas no coinciden.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
+
 <!-- CONTINUE STUDENT REGISTER -->
 
-<div *ngIf="studentFlag" class="container  register " style="margin-top: 8%;">
+<div *ngIf="studentFlag" class="container  register mb-5 " style="margin-top: 8%;">
     <div class="row">
         <div class="col-md-12">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
@@ -119,21 +179,21 @@
                                     <div class="form-group col-md-6">
                                         <label for="inputState">Tipo ID*</label>
                                         <select  [(ngModel)] ="user.idType" name="idType" id="inputState" class="form-control" >
-                                          <option   selected>Cédula nacional</option>
-                                          <option>Pasaporte</option>
+                                            <option   selected>Cédula nacional</option>
+                                            <option>Pasaporte</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                   <div class="form-group col-md-6">
-                                    <label for="birthday">Fecha de nacimiento</label>
-                                    <input [(ngModel)] ="user.birthday"  name="birthday" type="date" class="form-control" >
-                                  </div>
-                                  <div class="form-group col-md-6">
-                                    <label for="phone">Teléfono</label>
-                                    <input [(ngModel)] ="user.phone"  name="phone"  type="number" class="form-control" placeholder="Teléfono" >
-                                  </div>
-
+                                      <label for="birthday">Fecha de nacimiento</label>
+                                      <input [(ngModel)] ="user.birthday"  name="birthday" type="date" class="form-control" >
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="phone">Teléfono</label>
+                                        <input [(ngModel)] ="user.phone"  name="phone"  type="number" class="form-control" placeholder="Teléfono" >
+                                    </div>
+                                    
                                 </div>
                                 <div class="form-group">
                                     <label for="inputState">Tipo de cuenta*</label>
@@ -161,3 +221,5 @@
 </div>
 
 
+
+</div>

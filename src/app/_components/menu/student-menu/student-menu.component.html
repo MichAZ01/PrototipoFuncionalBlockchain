@@ -1,10 +1,10 @@
-<div class="nav-menu">
+<div  *ngIf = "flagHeader == 0" class="nav-menu">
     <div class="top-menu">
         <nav class="top-menu-nav" jscontroller="hH64kd" jsaction="GvneHb:Vxp0Zd;rcuQ6b:Vxp0Zd;">
             <ul>
                 <li class="menu-item-selected">
                     <a  data-rid="1" data-nav-type="1"
-                        aria-current="page" jsname="skHzY">
+                        aria-current="page" jsname="skHzY" (click) = "changeProfile();">
                         <div class="top-menu-item-text">Información personal</div>
                         <div class="top-menu-item-extra1" aria-hidden="true">
                             <div class="top-menu-item-extra2"></div>
@@ -12,8 +12,8 @@
                     </a>
                 </li>
                 <li>
-                    <a  data-rid="10003" data-nav-type="1">
-                        <div class="top-menu-item-text">Competencias verificadas</div>
+                    <a  data-rid="10003" data-nav-type="1" (click) = "changeComp();">
+                        <div class="top-menu-item-text">Competencias</div>
                         <div class="top-menu-item-extra1" aria-hidden="true">
                             <div class="top-menu-item-extra2"></div>
                         </div>
@@ -21,8 +21,8 @@
                 </li>
                 <li>
                     <a  data-rid="10004"
-                        data-nav-type="1">
-                        <div class="top-menu-item-text">Competencias pendientes</div>
+                        data-nav-type="1" (click) = "changeAddComp();">
+                        <div class="top-menu-item-text">Adquirir competencias</div>
                         <div class="top-menu-item-extra1" aria-hidden="true">
                             <div class="top-menu-item-extra2"></div>
                         </div>
@@ -35,8 +35,8 @@
         <nav class="side-menu-nav">
             <ul>
                 <li>
-                    <a  class="nav-class-1 nav-class-2 nav-class-3 menu-item-selected" data-rid="1" data-nav-type="9"
-                        aria-current="page">
+                    <a class="nav-class-1 nav-class-2 nav-class-3 menu-item-selected" data-rid="1" data-nav-type="9"
+                        aria-current="page" (click) = "changeProfile();">
                         <div class="nav-a-icon-div">
                             <style nonce="">
                                 .figureclassi6 {
@@ -44,15 +44,12 @@
                                     height: 24px;
                                 }
                             </style>
-                            <figure class="figureclass figureclassi6" aria-hidden="true"><img class="img-class"
-                                    src="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_home_selected_24x24_9d6bbfa62af2a7aaa6923725ff3e2e28.png"
-                                    srcset="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_home_selected_48x48_f42c53dae34f1f989014d38f1da5c39b.png 2x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_home_selected_72x72_c44a4fb6458c97e6db62ae4d6144397e.png 3x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_home_selected_96x96_5c998d9ce8f4b27ea44275549a45a597.png 4x"
-                                    data-iml="1465.9100000280887" data-atf="true"></figure>
+                            <i class="fa fa-user-circle-o"></i>
                         </div>
                         <div class="nav-a-text-div">Información personal</div>
                     </a></li>
                 <li><a  class="nav-class-1 nav-class-2 zCVEd nav-class-3" data-rid="10003"
-                        data-nav-type="9">
+                        data-nav-type="9" (click) = "changeComp();">
                         <div class="nav-a-icon-div">
                             <style nonce="">
                                 .figureclassi7 {
@@ -60,15 +57,12 @@
                                     height: 24px;
                                 }
                             </style>
-                            <figure class="figureclass figureclassi7" aria-hidden="true"><img class="img-class"
-                                    src="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_personalinfo_24x24_2b08480abc2504e2d70d74f2470f0ae0.png"
-                                    srcset="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_personalinfo_48x48_abc40f5cd0cb6cdf43ccee39a956f199.png 2x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_personalinfo_72x72_6d4bbb46b2b8d44af58a8aecd3051324.png 3x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_personalinfo_96x96_e44717dc1e54121a2cc35470f08112ea.png 4x"
-                                    data-iml="1471.0950000444427" data-atf="true"></figure>
+                            <i class="fa fa-certificate"></i>
                         </div>
-                        <div class="nav-a-text-div">Competencias verificadas</div>
+                        <div class="nav-a-text-div">Competencias</div>
                     </a></li>
                 <li><a  class="nav-class-1 nav-class-2 zCVEd nav-class-3"
-                        data-rid="10004" data-nav-type="9">
+                        data-rid="10004" data-nav-type="9" (click) = "changeAddComp();">
                         <div class="nav-a-icon-div">
                             <style nonce="">
                                 .figureclassi8 {
@@ -76,12 +70,171 @@
                                     height: 24px;
                                 }
                             </style>
-                            <figure class="figureclass figureclassi8" aria-hidden="true"><img class="img-class"
-                                    src="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_data_and_personalization_24x24_1af4cbe9d198b2f4a2e94e52732d8171.png"
-                                    srcset="https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_data_and_personalization_48x48_d3bb33c863dcae2122d9e3e4b9f97700.png 2x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_data_and_personalization_72x72_d06d87607b07791a53d6eac37f035c76.png 3x, https://www.gstatic.com/identity/boq/accountsettingsmobile/menu_data_and_personalization_96x96_124fb10c7165cb29911e728443efdbad.png 4x"
-                                    data-iml="1572.115000046324" data-atf="true"></figure>
+                            <i class="fa fa-plus-circle"></i>
                         </div>
-                        <div class="nav-a-text-div">Competencias pendientes</div>
+                        <div class="nav-a-text-div">Adquirir competencias</div>
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div  *ngIf = "flagHeader == 1" class="nav-menu">
+    <div class="top-menu">
+        <nav class="top-menu-nav" jscontroller="hH64kd" jsaction="GvneHb:Vxp0Zd;rcuQ6b:Vxp0Zd;">
+            <ul>
+                <li>
+                    <a  data-rid="1" data-nav-type="1"
+                        aria-current="page" jsname="skHzY" (click) = "changeProfile();">
+                        <div class="top-menu-item-text">Información personal</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item-selected">
+                    <a  data-rid="10003" data-nav-type="1" (click) = "changeComp();">
+                        <div class="top-menu-item-text">Competencias</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a  data-rid="10004"
+                        data-nav-type="1" (click) = "changeAddComp();">
+                        <div class="top-menu-item-text">Adquirir competencias</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="side-menu">
+        <nav class="side-menu-nav">
+            <ul>
+                <li>
+                    <a class="nav-class-1 nav-class-2 nav-class-3" data-rid="1" data-nav-type="9"
+                        aria-current="page" (click) = "changeProfile();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi6 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-user-circle-o"></i>
+                        </div>
+                        <div class="nav-a-text-div">Información personal</div>
+                    </a></li>
+                <li><a  class="nav-class-1 nav-class-2 nav-class-3 menu-item-selected" data-rid="10003"
+                        data-nav-type="9" (click) = "changeComp();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi7 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-certificate"></i>
+                        </div>
+                        <div class="nav-a-text-div">Competencias</div>
+                    </a></li>
+                <li><a  class="nav-class-1 nav-class-2 nav-class-3"
+                        data-rid="10004" data-nav-type="9" (click) = "changeAddComp();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi8 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <div class="nav-a-text-div">Adquirir competencias</div>
+                    </a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<div  *ngIf = "flagHeader == 2" class="nav-menu">
+    <div class="top-menu">
+        <nav class="top-menu-nav" jscontroller="hH64kd" jsaction="GvneHb:Vxp0Zd;rcuQ6b:Vxp0Zd;">
+            <ul>
+                <li>
+                    <a  data-rid="1" data-nav-type="1"
+                        aria-current="page" jsname="skHzY" (click) = "changeProfile();">
+                        <div class="top-menu-item-text">Información personal</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a  data-rid="10003" data-nav-type="1" (click) = "changeComp();">
+                        <div class="top-menu-item-text">Competencias</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="menu-item-selected">
+                    <a  data-rid="10004"
+                        data-nav-type="1" (click) = "changeAddComp();">
+                        <div class="top-menu-item-text">Adquirir competencias</div>
+                        <div class="top-menu-item-extra1" aria-hidden="true">
+                            <div class="top-menu-item-extra2"></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="side-menu">
+        <nav class="side-menu-nav">
+            <ul>
+                <li>
+                    <a class="nav-class-1 nav-class-2 nav-class-3" data-rid="1" data-nav-type="9"
+                        aria-current="page" (click) = "changeProfile();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi6 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-user-circle-o"></i>
+                        </div>
+                        <div class="nav-a-text-div">Información personal</div>
+                    </a></li>
+                <li><a  class="nav-class-1 nav-class-2 nav-class-3" data-rid="10003"
+                        data-nav-type="9" (click) = "changeComp();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi7 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-certificate"></i>
+                        </div>
+                        <div class="nav-a-text-div">Competencias</div>
+                    </a></li>
+                <li><a  class="nav-class-1 nav-class-2 nav-class-3 menu-item-selected"
+                        data-rid="10004" data-nav-type="9" (click) = "changeAddComp();">
+                        <div class="nav-a-icon-div">
+                            <style nonce="">
+                                .figureclassi8 {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            </style>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                        <div class="nav-a-text-div">Adquirir competencias</div>
                     </a></li>
             </ul>
         </nav>

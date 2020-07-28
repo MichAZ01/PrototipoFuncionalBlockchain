@@ -11,6 +11,8 @@ import { VerificatorProfileComponent } from './pages/verificator-profile/verific
 import { VerificatorAddCompComponent } from './pages/verificator-add-comp/verificator-add-comp.component';
 import { EmployerComponent } from './pages/employer/employer.component';
 import { AuthGuard } from 'src/auth.guard';
+import { StudentPageComponent } from './pages/student-page/student-page.component';
+import { TestComponent } from './pages/test/test.component';
 
 
 const routes: Routes = [
@@ -32,11 +34,6 @@ const routes: Routes = [
     component: HomePageComponent
   },
   {
-    path: 'student/:id',
-    component: StudentComponent,
-    canActivate : [AuthGuard]
-  },
-  {
     path: 'verificator/:id',
     component: VerificatorProfileComponent,
     canActivate : [AuthGuard]
@@ -56,11 +53,13 @@ const routes: Routes = [
     canActivate : [AuthGuard]
   },
   {
-    path: '**',
-    component: LoginPageComponent
-    
+    path: 'student/:id',
+    component: StudentPageComponent
+  },
+  {
+    path: 'test',
+    component: TestComponent
   }
-
 ];
 
 @NgModule({
