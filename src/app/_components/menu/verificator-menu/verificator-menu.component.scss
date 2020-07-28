@@ -1,6 +1,5 @@
 .nav-menu {
 	position: fixed;
-	cursor: pointer;
 }
 
 .top-menu {
@@ -39,6 +38,10 @@
 .nav-class-1 {
 	color: #1a73e8;
 	text-decoration: none
+}
+
+body:not(.uOat3d) .nav-class-1:focus {
+	outline: none
 }
 
 .nav-class-1:hover {
@@ -96,7 +99,7 @@
 }
 
 .nav-class-3.menu-item-selected {
-	background: #aec8eb;
+	background: #aec8eb
 }
 
 .nav-class-3:hover {
@@ -137,9 +140,9 @@
 	color: #3c4043
 }
 
-.nav-class-3.menu-item-selected .nav-a-icon-div,
+.nav-class-3.menu-item-selected .nav-a-icon-div .DPvwYc,
 .nav-class-3.menu-item-selected .nav-a-text-div {
-	color: #1967d2;
+	color: #1967d2
 }
 
 .top-menu-nav {
@@ -260,9 +263,4 @@
 
 .top-menu-nav > ul > li.menu-item-selected .top-menu-item-extra2 {
 	border: solid 3px #1a73e8
-}
-
-.fa {
-	width: 24px;
-	height: 24px;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 import { Employer } from 'src/app/models/employer.model';
 import { Router } from '@angular/router';
+import { Competencia } from 'src/app/models/competencia.model';
 
 
 @Component({
@@ -14,6 +15,8 @@ export class LoginPageComponent implements OnInit {
   loginUserData = {"email": "","password": ""};
   user: User;
   employer : Employer;
+  competencia : Competencia;
+  competencias: Array<Competencia>;
   users : Array<User>;
   employers: Array<Employer>;
   errorFlag = false;
@@ -27,9 +30,11 @@ export class LoginPageComponent implements OnInit {
     
     this.users = JSON.parse(localStorage.getItem("users"));
     this.employers = JSON.parse(localStorage.getItem("employers"));
+    this.competencias =  JSON.parse(localStorage.getItem("competencias"));
     
     this.user = this.users.find( ({ email }) => email === this.loginUserData.email );
     this.employer = this.employers.find( ({ email }) => email === this.loginUserData.email );
+    this.competencia = this.competencias.find( ({ email }) => email === this.loginUserData.email );
     if(this.user){
       if(this.user.password === this.loginUserData.password){
         if(this.user.accountType === "Estudiante"){
@@ -49,17 +54,27 @@ export class LoginPageComponent implements OnInit {
       }.bind(this), 3000);
       }
     }else if(this.employer) {
-      if(this.employer.password === this.loginUserData.password){
-        localStorage.setItem('token',this.employer.email.toString())
-        this._router.navigate(['employer/'+this.employer.email]); // to employer page
-        console.log(this.loginUserData,"User to employer")
+        if(this.employer.password === this.loginUserData.password){
+          localStorage.setItem('token',this.employer.email.toString())
+          this._router.navigate(['employer/'+this.employer.email]); // to employer page
+          console.log(this.loginUserData,"User to employer")
+        }else{
+          this.errorFlag = !this.errorFlag;
+        setTimeout(function() {
+          this.errorFlag = !this.errorFlag;   
+        }.bind(this), 3000);
+      }
+    }else if(this.competencia){
+      if(this.competencia.password === this.loginUserData.password){
+        localStorage.setItem('token',this.competencia.email.toString())
+        //this._router.navigate(['employer/'+this.employer.email]); // to employer page
+        console.log(this.loginUserData,"User to competencias")
       }else{
         this.errorFlag = !this.errorFlag;
       setTimeout(function() {
         this.errorFlag = !this.errorFlag;   
       }.bind(this), 3000);
-      }
-    } else{
+    }}else{
       this.errorFlag = !this.errorFlag;
       setTimeout(function() {
         this.errorFlag = !this.errorFlag;   
