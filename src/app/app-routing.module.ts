@@ -13,6 +13,8 @@ import { EmployerComponent } from './pages/employer/employer.component';
 import { AuthGuard } from 'src/auth.guard';
 import { StudentPageComponent } from './pages/student-page/student-page.component';
 import { TestComponent } from './pages/test/test.component';
+import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
+import { CompAddCompetenciesComponent } from './pages/comp-add-competencies/comp-add-competencies.component';
 
 
 const routes: Routes = [
@@ -59,6 +61,17 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestComponent
+    path: '',
+    component: LoginPageComponent
+    
+  },
+  {
+    path: 'competencies',
+    component: CompetenciesPageComponent
+  },
+  {
+    path: 'competencies-addStatements',
+    component: CompAddCompetenciesComponent
   }
 ];
 
