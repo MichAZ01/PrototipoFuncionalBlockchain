@@ -20,6 +20,9 @@ import { StudentPageComponent } from './pages/student-page/student-page.componen
 import { StudentAddcompComponent } from './pages/student-addcomp/student-addcomp.component';
 import { StudentCompComponent } from './pages/student-comp/student-comp.component';
 import { TestComponent } from './pages/test/test.component';
+import { VerificatorMenuComponent } from './_components/menu/verificator-menu/verificator-menu.component';
+import { VerificatorProfileComponent } from './pages/verificator-profile/verificator-profile.component';
+import { VerificatorAddCompComponent } from './pages/verificator-add-comp/verificator-add-comp.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { TestComponent } from './pages/test/test.component';
     StudentPageComponent,
     StudentAddcompComponent,
     StudentCompComponent,
-    TestComponent
+    TestComponent,
+    VerificatorMenuComponent,
+    VerificatorProfileComponent,
+    VerificatorAddCompComponent
   ],
   imports: [
     BrowserModule,
