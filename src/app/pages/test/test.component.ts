@@ -22,7 +22,9 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  ngAfterViewInit(){
+    
+  }
   endTest(){
     if (typeof this.web3 !== 'undefined') {
       this.web3 = new Web3(this.web3.currentProvider);
