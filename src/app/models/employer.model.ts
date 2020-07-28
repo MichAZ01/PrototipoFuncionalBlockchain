@@ -1,5 +1,5 @@
 export class Employer {
     companyName: String ;
-    email: String ;
+    email: String;
     password: String;
 }

@@ -7,7 +7,6 @@ import { User } from './app/models/user.model';
 import { Employer } from './app/models/employer.model';
 import { Competencia } from './app/models/competencia.model';
 
-
   let student = new User();
   let verificator = new User();
   let employer = new Employer();
