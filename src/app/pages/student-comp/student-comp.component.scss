@@ -1,0 +1,57 @@
+
+  .body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    margin: 0;
+    text-size-adjust: 100%;
+    letter-spacing: .01428571em;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: #3c4043
+  }
+  
+  .content {
+    overflow-y: scroll;
+    overflow: hidden;
+    min-height: 85.8vh;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+
+  .card-body {
+    margin-top: -10px;
+  }
+
+  .comp-body {
+    display: flex;
+    align-content: center;
+    text-align: center;
+  }
+
+  i {
+    margin-left: 10px;
+    width: 20px;
+    height: 25px;
+    font-size: 25px;
+    //background-color: #F00;
+  }
+
+  img {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    width: 50%;
+  }
+
+  .qr-info {
+    font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 75%;
+  }

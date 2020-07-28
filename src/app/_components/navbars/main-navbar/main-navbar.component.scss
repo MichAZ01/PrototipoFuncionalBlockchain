@@ -4,6 +4,7 @@ header {
     background: #eeeeee;
     font-family: 'Varela Round', sans-serif;
 }
+
 header {
     margin: 0;
     font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
@@ -33,4 +34,8 @@ header {
 .navbar .dropdown-menu a:hover, .navbar .dropdown-menu a:focus {
 	color: #333 !important;
 	background: transparent !important;
+}
+
+.dropdown-item, .nav-item {
+    cursor: pointer;
 }
