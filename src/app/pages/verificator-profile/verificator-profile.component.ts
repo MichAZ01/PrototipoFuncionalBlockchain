@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./verificator-profile.component.scss']
 })
 export class VerificatorProfileComponent implements OnInit {
-
-  constructor() { }
+  viewFlag: Number;
+  constructor() { 
+    this.viewFlag = 0;
+  }
 
   ngOnInit(): void {
   }

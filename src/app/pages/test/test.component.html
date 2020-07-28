@@ -1,6 +1,6 @@
-<app-main-navbar>
-</app-main-navbar>
+
 <div class="authentication-outlet">
+    
     <main class="sa-assessment-flow__main neptune-grid one-column align-items-center">
 
         <section class="sa-assessment-flow__card sa-assessment-quiz artdeco-card display-flex flex-column">
@@ -116,17 +116,35 @@
                         </span>
                     </div>
 
-                    <button data-control-name="practice-next_question" disabled="" id="ember32"
-                        class="sa-assessment-quiz__primary-action artdeco-button artdeco-button--2 artdeco-button--primary artdeco-button--disabled ember-view">
-                        <!---->
+                    <button data-control-name="practice-next_question" id="ember32"
+                        class="sa-assessment-quiz__primary-action artdeco-button artdeco-button--2 artdeco-button--primary artdeco-button--disabled ember-view" data-toggle="modal" data-target="#staticBackdrop" >
                         <span class="artdeco-button__text">
-                            Next
+                            Finalizar
                         </span></button>
-
+        
                 </div>
             </footer>
 
         </section>
+        <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Prueba finalizada</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Usted y 10 verificadores más han minado esta prueba y se ha llegado a un consenso.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="sa-assessment-quiz__primary-action artdeco-button artdeco-button--2 artdeco-button--primary artdeco-button--disabled ember-view" data-dismiss="modal" (click) = "endTest();">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
         <div id="ember35" class="ember-view">
             <div id="ember36" class="ember-view">
                 <!---->
