@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from "../../models/user.model";
 import { Employer } from "../../models/employer.model";
 import { Router } from '@angular/router';
+import { Competencia } from 'src/app/models/competencia.model';
 
 @Component({
   selector: 'app-register',
@@ -13,6 +14,7 @@ export class RegisterComponent implements OnInit {
   studentFlag = false;
   public user = new User();
   public employer = new Employer();
+  public competencia = new Competencia();
   errorPass = false;
   errorEmpty = false;
   errorReqInfo = false;
@@ -25,6 +27,29 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
       
+  }
+
+  registerCompe(){
+    let competencias : Array<Competencia> = JSON.parse(localStorage.getItem("competencias"));
+    
+    if(this.competencia.email !== undefined){
+      if(this.competencia.password === this.passwordConfirm.passConfirm){
+        console.log(this.competencia,"registro completo compe")
+        competencias.push(this.competencia);
+        localStorage.setItem('token',this.competencia.email.toString())
+        localStorage.setItem("competencias",JSON.stringify(competencias)); // set in local storage new employer
+        
+        //this._router.navigate(['competencia/'+this.employer.email]); // to employer page
+      }else{
+        this.errorPass = !this.errorPass
+      }
+    }else{
+      this.errorReqInfo = !this.errorReqInfo;
+      setTimeout(function() {
+        this.errorReqInfo = !this.errorReqInfo;   
+      }.bind(this), 3000);
+      return false;
+    }
   }
 
   registerUser(){

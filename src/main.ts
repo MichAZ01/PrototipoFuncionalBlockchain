@@ -5,13 +5,17 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { User } from './app/models/user.model';
 import { Employer } from './app/models/employer.model';
+import { Competencia } from './app/models/competencia.model';
+
 
   let student = new User();
   let verificator = new User();
   let employer = new Employer();
+  let competencia = new Competencia();
   let users : Array<User> = [];
   let employers : Array<Employer> = [];
   let  date: Date = new Date();
+  let competencias : Array<Competencia> = [];
   student.email = "student@gmail.com";
   student.password = "student1234";
   student.name = "Sergio";
@@ -36,12 +40,21 @@ import { Employer } from './app/models/employer.model';
   verificator.recoverEmail = "checho@gmail.com";
   verificator.accountType = "Verificador";
   users.push(verificator);
-  localStorage.setItem("users",JSON.stringify(users)); /// set in local storage default student
+  competencia.email = "competencia@gmail.com";
+  competencia.password = "compe1234";
+  competencia.name = "Nicole";
+  competencia.lastname1 = "Garita";
+  competencia.lastname2= "Zuñiga";
+  competencia.idType = "Pasaporte";
+  competencia.id = "12345678";
+  competencias.push(competencia);
+  localStorage.setItem("users",JSON.stringify(users)); /// set in local storage default student and verificator
+  localStorage.setItem("competencias",JSON.stringify(competencias)); /// set in local storage default student and verificator
   employer.companyName = "Industrias Zapateria S.A";
   employer.email = "zapateria@gmail.com";
   employer.password = "zapa1234";
   employers.push(employer);
-  localStorage.setItem("employers",JSON.stringify(employers)); /// set in local storage default student   
+  localStorage.setItem("employers",JSON.stringify(employers)); /// set in local storage default employer   
 
 if (environment.production) {
   
