@@ -50,7 +50,7 @@ import { CompAddCompetenciesComponent } from './pages/comp-add-competencies/comp
     VerificatorMenuComponent,
     VerificatorProfileComponent,
     VerificatorAddCompComponent,
-    EmployerMenuComponent
+    EmployerMenuComponent,
     CompetenciesPageComponent,
     CompetenciesMenuComponent,
     CompetenciesNavbarComponent,
