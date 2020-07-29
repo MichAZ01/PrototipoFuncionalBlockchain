@@ -24,6 +24,10 @@ import { VerificatorMenuComponent } from './_components/menu/verificator-menu/ve
 import { VerificatorProfileComponent } from './pages/verificator-profile/verificator-profile.component';
 import { VerificatorAddCompComponent } from './pages/verificator-add-comp/verificator-add-comp.component';
 import { EmployerMenuComponent } from './_components/employer-menu/employer-menu.component';
+import { CompetenciesPageComponent } from './pages/competencies-page/competencies-page.component';
+import { CompetenciesMenuComponent } from './_components/menu/competencies-menu/competencies-menu.component';
+import { CompetenciesNavbarComponent } from './_components/navbars/competencies-navbar/competencies-navbar.component';
+import { CompAddCompetenciesComponent } from './pages/comp-add-competencies/comp-add-competencies.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +51,10 @@ import { EmployerMenuComponent } from './_components/employer-menu/employer-menu
     VerificatorProfileComponent,
     VerificatorAddCompComponent,
     EmployerMenuComponent
+    CompetenciesPageComponent,
+    CompetenciesMenuComponent,
+    CompetenciesNavbarComponent,
+    CompAddCompetenciesComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,268 @@
+.nav-menu {
+	position: fixed;
+	cursor: pointer;
+}
+
+.top-menu {
+	position: fixed;
+	width: 100%;
+}
+
+.top-menu > a {
+	text-decoration: none;
+	color: #2962ff
+}
+
+.figureclass {
+	-webkit-box-align: center;
+	box-align: center;
+	align-items: center;
+	display: flex;
+	-webkit-box-pack: center;
+	box-pack: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	margin: 0;
+	overflow: hidden;
+	padding: 0
+}
+
+.img-class {
+	height: 100%;
+	width: auto
+}
+
+.nav-class-2 {
+	display: block
+}
+
+.nav-class-1 {
+	color: #1a73e8;
+	text-decoration: none
+}
+
+.nav-class-1:hover {
+	text-decoration: none
+}
+
+.side-menu {
+	display: none;
+	float: left;
+	height: 110vh;
+}
+
+@media (min-width:1024px) {
+	.side-menu {
+		display: block;
+		width: 280px
+	}
+	
+	.top-menu {
+		display: none
+	}
+
+	.top-menu+.mKShuf {
+		top: 0
+	}
+}
+
+.side-menu-nav {
+	display: block;
+	padding-top: 20px;
+	position: relative;
+	width: 280px
+}
+
+.side-menu-nav > ul > li,
+.side-menu-nav > ul {
+	display: block;
+	margin: 0;
+	padding: 0
+}
+
+
+.nav-class-3 {
+	-webkit-box-align: center;
+	box-align: center;
+	align-items: center;
+	display: flex;
+	border-radius: 0 50px 50px 0;
+	padding: 10px 16px 10px 24px;
+	position: relative
+}
+
+.nav-class-3:focus {
+	border-color: #1a73e8
+}
+
+.nav-class-3.menu-item-selected {
+	background: #aec8eb;
+}
+
+.nav-class-3:hover {
+	background: #dfe8f5;
+}
+
+.nav-a-icon-div {
+	-webkit-box-align: center;
+	box-align: center;
+	align-items: center;
+	display: flex;
+	-webkit-box-pack: center;
+	box-pack: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	hyphens: auto;
+	word-break: break-word;
+	word-wrap: break-word;
+	color: #3c4043;
+	font-size: 24px;
+	font-weight: 400;
+	padding-right: 16px
+}
+
+.nav-a-text-div {
+	box-flex: 1;
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 0;
+	letter-spacing: .01785714em;
+	font-family: 'Google Sans', Roboto, Arial, sans-serif;
+	font-size: .875rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	hyphens: auto;
+	word-break: break-word;
+	word-wrap: break-word;
+	color: #3c4043
+}
+
+.nav-class-3.menu-item-selected .nav-a-icon-div,
+.nav-class-3.menu-item-selected .nav-a-text-div {
+	color: #1967d2;
+}
+
+.top-menu-nav {
+	background-color: rgba(255, 255, 255, 0.961);
+	border-bottom: 1px solid #dadce0;
+	transition: border .25s;
+	width: 100%;
+}
+
+.top-menu-nav {
+	border-color: rgba(218, 220, 224, 0);
+}
+
+.top-menu-nav > ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	-webkit-overflow-scrolling: touch;
+	height: 48px;
+	overflow-x: auto
+}
+
+.top-menu-nav > ul::-webkit-scrollbar {
+	display: none
+}
+
+@media (min-width:520px) {
+	.top-menu-nav:hover {
+		display: block
+	}
+}
+
+.top-menu-nav > ul > li {
+	display: flex;
+	-webkit-box-orient: vertical;
+	box-orient: vertical;
+	flex-direction: column;
+	-webkit-box-pack: end;
+	box-pack: end;
+	-webkit-box-pack: end;
+	justify-content: flex-end;
+	box-flex: 0;
+	flex-grow: 0;
+	flex-shrink: 0;
+	height: 48px;
+	margin: 0 auto;
+	padding: 0 16px
+}
+.top-menu-nav > ul > li > a {
+	display: block;
+	color: #1a73e8;
+	text-decoration: none;
+}
+
+.top-menu-nav > ul > li > a:hover {
+	text-decoration: none;
+}
+
+.top-menu-nav > ul > li:first-child {
+	padding-left: 20px
+}
+
+.top-menu-nav > ul > li:last-child {
+	padding-right: 20px
+}
+
+@media (min-width:600px) {
+	.top-menu-nav > ul > li:first-child {
+		padding-left: 24px
+	}
+	.top-menu-nav > ul > li:last-child {
+		padding-right: 24px
+	}
+}
+
+@media (min-width:720px) {
+	.top-menu-nav > ul > li {
+		padding-left: 24px;
+		padding-right: 24px
+	}
+}
+
+.top-menu-item-text {
+	letter-spacing: .01785714em;
+	font-family: 'Google Sans', Roboto, Arial, sans-serif;
+	font-size: .875rem;
+	font-weight: 500;
+	line-height: 1.25rem;
+	hyphens: auto;
+	word-break: break-word;
+	word-wrap: break-word;
+	color: #5f6368;
+	margin: 0;
+	padding: 0 0 8px 0;
+	text-align: center;
+	white-space: nowrap
+}
+
+.top-menu-item-extra1 {
+	box-sizing: border-box;
+	height: 3px;
+	overflow-y: hidden;
+	padding: 0 4px;
+	width: 100%
+}
+
+.top-menu-item-extra2 {
+	border-radius: 3px;
+	box-sizing: border-box;
+	min-width: 24px;
+	width: 100%
+}
+
+.top-menu-nav > ul > li.menu-item-selected .top-menu-item-text,
+.top-menu-nav > ul > li:hover .top-menu-item-text {
+	color: #1a73e8
+}
+
+.top-menu-nav > ul > li.menu-item-selected .top-menu-item-extra2 {
+	border: solid 3px #1a73e8
+}
+
+.fa {
+	width: 24px;
+	height: 24px;
+}
