@@ -38,8 +38,7 @@ export class RegisterComponent implements OnInit {
         competencias.push(this.competencia);
         localStorage.setItem('token',this.competencia.email.toString())
         localStorage.setItem("competencias",JSON.stringify(competencias)); // set in local storage new employer
-        
-        //this._router.navigate(['competencia/'+this.employer.email]); // to employer page
+        this._router.navigate(['competencies/'+this.competencia.id]); // to employer page
       }else{
         this.errorPass = !this.errorPass
       }

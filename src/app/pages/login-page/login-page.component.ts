@@ -40,11 +40,9 @@ export class LoginPageComponent implements OnInit {
         if(this.user.accountType === "Estudiante"){
           localStorage.setItem('token',this.user.identification.toString())
           this._router.navigate(['student/'+this.user.identification]); // to user page
-          console.log(this.loginUserData,"User to Student")
         }else{
           localStorage.setItem('token',this.user.identification.toString())
           this._router.navigate(['verificator/'+this.user.identification]); // to user page
-          console.log(this.loginUserData,"User to Verificator")
         }
       }else{
         
@@ -57,7 +55,6 @@ export class LoginPageComponent implements OnInit {
         if(this.employer.password === this.loginUserData.password){
           localStorage.setItem('token',this.employer.email.toString())
           this._router.navigate(['employer/'+this.employer.email]); // to employer page
-          console.log(this.loginUserData,"User to employer")
         }else{
           this.errorFlag = !this.errorFlag;
         setTimeout(function() {
@@ -67,8 +64,7 @@ export class LoginPageComponent implements OnInit {
     }else if(this.competencia){
       if(this.competencia.password === this.loginUserData.password){
         localStorage.setItem('token',this.competencia.email.toString())
-        //this._router.navigate(['employer/'+this.employer.email]); // to employer page
-        console.log(this.loginUserData,"User to competencias")
+        this._router.navigate(['competencies/'+this.competencia.id]); // to competencies page
       }else{
         this.errorFlag = !this.errorFlag;
       setTimeout(function() {

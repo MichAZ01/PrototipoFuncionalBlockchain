@@ -61,17 +61,15 @@ const routes: Routes = [
   {
     path: 'test',
     component: TestComponent
+  },
+  {
     path: '',
     component: LoginPageComponent
     
   },
   {
-    path: 'competencies',
+    path: 'competencies/:id',
     component: CompetenciesPageComponent
-  },
-  {
-    path: 'competencies-addStatements',
-    component: CompAddCompetenciesComponent
   }
 ];
 

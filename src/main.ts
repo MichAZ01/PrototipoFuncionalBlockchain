@@ -45,7 +45,7 @@ import { Competencia } from './app/models/competencia.model';
   competencia.lastname1 = "Garita";
   competencia.lastname2= "Zuñiga";
   competencia.idType = "Pasaporte";
-  competencia.id = "12345678";
+  competencia.id = "701210234";
   competencias.push(competencia);
   localStorage.setItem("users",JSON.stringify(users)); /// set in local storage default student and verificator
   localStorage.setItem("competencias",JSON.stringify(competencias)); /// set in local storage default student and verificator

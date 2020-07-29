@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CompetenciesPageComponent } from 'src/app/pages/competencies-page/competencies-page.component';
 
 @Component({
   selector: 'app-competencies-menu',
@@ -9,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CompetenciesMenuComponent implements OnInit {
   flagHeader : number;
 
-  constructor(private router: Router,private activeRoute :ActivatedRoute) { }
+  constructor(private router: Router,private activeRoute :ActivatedRoute, private competenciesPC: CompetenciesPageComponent) { }
 
   ngOnInit(): void {
     if('/competencies-addStatements' == location.pathname.toString())
@@ -18,16 +19,14 @@ export class CompetenciesMenuComponent implements OnInit {
       this.flagHeader = 0;
   }
 
-  changeProfile(){
-    //this.router.navigate(['student/'+localStorage.getItem("token")]);
-    this.router.navigate(['competencies']);
+  changeCompetencies(){
     this.flagHeader = 0;
+    this.competenciesPC.viewFlag = 0;
   }
 
   changeAddComp(){ 
-    this.router.navigate(['competencies-addStatements']);
     this.flagHeader = 1;
-
+    this.competenciesPC.viewFlag = 1;
   }
 
 }

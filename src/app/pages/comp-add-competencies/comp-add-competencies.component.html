@@ -1,195 +1,199 @@
-<app-competencies-navbar>
-</app-competencies-navbar>
-
-<section class="body">
-    <app-competencies-menu>
-    </app-competencies-menu>
-    <section class="content">
-        <div class="col-12 mt-3">
-            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregarCompetencia">
-                Agregar enunciado tipo
+<div class="col-12 mt-3">
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#agregarEnunciado">
+        Agregar enunciado tipo
+    </button>
+    <div class="modal fade" id="agregarEnunciado" tabindex="-1" role="dialog"
+        aria-labelledby="agregarEnunciadoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="agregarEnunciadoLabel">Nuevo enunciado tipo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="align-content: center;">
+                    <div class="field-wrap">
+                        <label style="margin-right: 5px;">Nombre del enunciado</label>
+                        <input placeholder="Escriba el nombre" />
+                    </div>
+                    <div class="field-wrap">
+                        <label style="margin-right: 19px;">Competencia asociada</label>
+                        <select id="campo-competencia" style="width: 183px;">
+                            <option selected>Matemática intermedio</option>
+                            <option>Python principiante</option>
+                        </select>
+                    </div>
+                    <div class="field-wrap">
+                        <label style="margin-right: 19px;">Tipo de prueba</label>
+                        <select id="campo-competencia" style="width: 183px;">
+                            <option selected>Cargar vídeo</option>
+                            <option>Selección única</option>
+                            <option>Selección múltiple</option>
+                            <option>Cuestionario</option>
+                            <option>Resolución de problemas</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Crear enunciado</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-12 mt-3">
+    <div class="card">
+        <h5 class="card-header">Enunciados tipo</h5>
+        <div class="card-body">
+            <h5 class="card-title">Resolver integrales</h5>
+            <p class="card-text">Competencia asociada: Matemática intermedio</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#integrales">
+                ver detalles enunciado
             </button>
-            <div class="modal fade" id="agregarCompetencia" tabindex="-1" role="dialog"
-                aria-labelledby="agregarCompetenciaLabel" aria-hidden="true">
+
+            <!-- Modal -->
+            <div class="modal fade" id="integrales" tabindex="-1" role="dialog" aria-labelledby="integralesModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="agregarCompetenciaLabel">Nuevo enunciado tipo</h5>
+                            <h5 class="modal-title" id="integralesModalLabel">Resolver integrales</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="modal-body" style="align-content: center;">
-                            <div class="field-wrap">
-                                <label style="margin-right: 5px;">Nombre de la competencia</label>
-                                <input placeholder="Escriba el nombre" />
-                            </div>
-                            <div class="field-wrap">
-                                <label style="margin-right: 19px;">Campo al que pertenece</label>
-                                <select id="campo-competencia" style="width: 183px;">
-                                    <option selected>Informática</option>
-                                    <option>Medicina</option>  
-                                    <option>Educación</option>    
-                                </select>
+                        <div class="modal-body">
+                            <div style="display: flex;">
+                                <div class="qr-info">
+                                    <a class="navbar-brand">
+                                        <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
+                                    </a><br />
+                                    Nombre competencia asociada: Matemática intermedio <br />
+                                    Campo: Educación
+                                    <div class="dropdown-divider"></div>
+                                    <div class="comp-body">
+                                        <p class="card-title" style="margin-top: 3px;">Tipo de prueba: cuestionario</p>
+                                    </div>
+                                    <div align="center">
+                                        <button type="button" class="btn btn-success">Ver cuestionario</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Crear enunciado</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 mt-3">
-            <div class="card">
-                <h5 class="card-header">Competencias</h5>
-                <div class="card-body">
-                    <h5 class="card-title">Matemática intermedio</h5>
-                    <p class="card-text">Adquirir la competencia de nivel intermedio de matemática.</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Adquirir competencia
-                    </button>
+        <div class="card-body">
+            <h5 class="card-title">Prueba Gauss - Jordan</h5>
+            <p class="card-text">Competencia asociada: Matemática intermedio</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gaussJordan">
+                Ver detalles enunciado
+            </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Matemática intermedio</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Para adquirir la competencia de nivel intermedio de matemática se debe seguir las
-                                    instrucciones de abajo.
-                                    <ul class="list-group mt-5">
-                                        <li class="list-group-item">Se dispondrá de 1 hora de tiempo.</li>
-                                        <li class="list-group-item">Para obtener la competencia ocupas resolver el
-                                            enunciado.
-                                        </li>
-                                        <li class="list-group-item">Si la solución esta incorrecta hasta dentro de un
-                                            mes se
-                                            podrá reintentar.</li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Adquirir</button>
+            <!-- Modal -->
+            <div class="modal fade" id="gaussJordan" tabindex="-1" role="dialog" aria-labelledby="gaussJordanModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="gaussJordanModalLabel">Prueba Gauss - Jordan</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="display: flex;">
+                                <div class="qr-info">
+                                    <a class="navbar-brand">
+                                        <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
+                                    </a><br />
+                                    Nombre competencia asociada: Matemática intermedio <br />
+                                    Campo: Educación
+                                    <div class="dropdown-divider"></div>
+                                    <div class="comp-body">
+                                        <p class="card-title" style="margin-top: 3px;">Tipo de prueba: Selección única</p>
+                                    </div>
+                                    <div align="center">
+                                        <button type="button" class="btn btn-success">Ver prueba</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Inglés básico</h5>
-                    <p class="card-text">Adquirir la competencia de nivel básico de inglés.</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Adquirir competencia
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Inglés básico</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Para adquirir la competencia de nivel básico de inglés básico se debe seguir las
-                                    instrucciones de abajo.
-                                    <ul class="list-group mt-5">
-                                        <li class="list-group-item">Se dispondrá de 1 hora de tiempo.</li>
-                                        <li class="list-group-item">Para obtener la competencia ocupas resolver el
-                                            enunciado.
-                                        </li>
-                                        <li class="list-group-item">Si la solución esta incorrecta hasta dentro de un
-                                            mes se
-                                            podrá reintentar.</li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Adquirir</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">Programación básica en Python</h5>
-                    <p class="card-text">Adquirir la competencia de programación básica en Python.</p>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalPython">
-                        Adquirir competencia
-                    </button>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModalPython" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Programación básica en Python</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    Para adquirir la competencia de programación básica en Python se debe seguir las
-                                    instrucciones
-                                    de abajo.
-                                    <ul class="list-group mt-5">
-                                        <li class="list-group-item">Se dispondrá de 1 hora de tiempo.</li>
-                                        <li class="list-group-item">Para obtener la competencia ocupas resolver el
-                                            enunciado.
-                                        </li>
-                                        <li class="list-group-item">Si la solución está incorrecta hasta dentro de un
-                                            mes se
-                                            podrá reintentar.</li>
-                                    </ul>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary"
-                                        data-dismiss="modal">Adquirir</button>
-                                </div>
-                            </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                         </div>
                     </div>
                 </div>
             </div>
-            <nav style="margin-left: 40%; margin-top: 2%;" aria-label="Page navigation example">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                    </li>
-                    <li class="page-item-active"><a style="background-color: #007bff !important; color: white;" class="page-link">1</a></li>
-                    <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item"><a class="page-link">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
-    </section>
+        <div class="card-body">
+            <h5 class="card-title">Algoritmo ordenar lista ascendente</h5>
+            <p class="card-text">Competencia asociada: Python principiante</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#algoritmoModalPython">
+                Ver detalles enunciado
+            </button>
 
-</section>
+            <!-- Modal -->
+            <div class="modal fade" id="algoritmoModalPython" tabindex="-1" role="dialog"
+                aria-labelledby="algoritmoModalPythonModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="algoritmoModalPythonModalLabel">Algoritmo ordenar lista ascendente</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div style="display: flex;">
+                                <div class="qr-info">
+                                    <a class="navbar-brand">
+                                        <i class="fa fa-cube" style="margin-right: 5px;"></i>SRAC<b></b>
+                                    </a><br />
+                                    Nombre competencia asociada: Matemática intermedio <br />
+                                    Campo: Informática
+                                    <div class="dropdown-divider"></div>
+                                    <div class="comp-body">
+                                        <p class="card-title" style="margin-top: 3px;">Tipo de prueba: Resolución de problemas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav style="margin-left: 40%; margin-top: 2%;" aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item-active"><a style="background-color: #007bff !important; color: white;"
+                    class="page-link">1</a></li>
+            <li class="page-item"><a class="page-link">2</a></li>
+            <li class="page-item"><a class="page-link">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
