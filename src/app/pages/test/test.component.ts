@@ -7,6 +7,8 @@ import * as Web3 from 'web3';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+  questionNumber: Number;
+
   web3 = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
   quiz: [
     {question: 1,
@@ -18,7 +20,9 @@ export class TestComponent implements OnInit {
     ]
     }
   ];
-  constructor(private router: Router,private activeRoute :ActivatedRoute) { }
+  constructor(private router: Router,private activeRoute :ActivatedRoute) {
+    this.questionNumber = 0;
+  }
 
   ngOnInit(): void {
   }

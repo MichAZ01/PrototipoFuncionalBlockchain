@@ -63,11 +63,6 @@ const routes: Routes = [
     component: TestComponent
   },
   {
-    path: '',
-    component: LoginPageComponent
-    
-  },
-  {
     path: 'competencies/:id',
     component: CompetenciesPageComponent
   }
