@@ -9,11 +9,11 @@
             <div class="navbar-nav ml-auto">
                 <div class="nav-item dropdown">
                     <a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle user-action">
-                        <i class="menu-icon fa fa-user"></i><span class="menu-text">Nombre apellido</span><b
+                        <i class="menu-icon fa fa-user"></i><span class="menu-text">{{infoUser}}</span><b
                             class="caret"></b></a>
                     <div class="dropdown-menu">
                         <div class="divider dropdown-divider"></div>
-                        <a href="#" class="dropdown-item"><i class="fa fa-power-off"></i> Salir</a>
+                        <a routerLink = '/'  (click)= "authService.logoutUser()"  class="dropdown-item"><i class="fa fa-power-off"></i> Salir</a>
                     </div>
                 </div>
             </div>

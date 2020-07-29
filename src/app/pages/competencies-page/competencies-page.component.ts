@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./competencies-page.component.scss']
 })
 export class CompetenciesPageComponent implements OnInit {
+  viewFlag: Number;
 
-  constructor() { }
+  constructor() {
+    this.viewFlag = 0;
+   }
 
   ngOnInit(): void {
   }
